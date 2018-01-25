@@ -123,7 +123,7 @@
             <!--一个发送到stopPort端口的有效命令。-->
             <stopKey>foo</stopKey>
             <!--如果scanInterval参数设置了一个非0的数，那么Jetty将会监视你的pom.xml，WEB-INF/lib，WEB-INF/classes和WEB-INF/web.xml文件，如果检测到改变则重新部署-->
-            <scanIntervalSeconds>10</scanIntervalSeconds>
+            <scanIntervalSeconds>1</scanIntervalSeconds>
             <webApp>
               <!-- web项目根路径 -->
               <contextPath>/</contextPath>

@@ -1,5 +1,6 @@
 package com.wlt;
 
+import com.wlt.core.common.MsgResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,7 +18,15 @@ public class IndexController {
      * @return
      */
     @RequestMapping("/test")
-    public String test(){
-        return "springmvc test success(调试成功)";
+    public MsgResult test(){
+        return  new MsgResult("springmvc test success(调试成功)");
+    }
+    /**
+     * 调试全局异常捕捉
+     * @return
+     */
+    @RequestMapping("/error")
+    public MsgResult error() throws Exception {
+        throw new Exception("测试全局异常捕捉成功");
     }
 }

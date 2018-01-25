@@ -18,6 +18,8 @@
     <!--use-defalut-filters默认打开，表示扫描全部的注解，包括有controller,service,reponsitory等注解，关上之后，通过过滤器里面定义扫描的范围做到只扫描controller的功能-->
     <context:component-scan base-package="com.wlt" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:include-filter>
+        <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RestControllerAdvice"></context:include-filter>
+        <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"></context:include-filter>
     </context:component-scan>
     <!--和SpringMVC相关如下配置，经过验证，这个是SpringMVC必须要配置的，因为它声明了@RequestMapping、@RequestBody、@ResponseBody等的spring-bean。并且，该配置默认加载很多的参数绑定方法，比如json转换解析器等-->
     <mvc:annotation-driven>

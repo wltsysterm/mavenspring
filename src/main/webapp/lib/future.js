@@ -836,6 +836,8 @@ bs.respHandle = function (result, option) {
         if(option&&option.success){
             option.success(result.data);
         }
+    } else if (result.code == 'globalError'){
+        bs.errorMsg(result.data);
     }else {
         bs.errorMsg(result);
         if(option&&option.error){
