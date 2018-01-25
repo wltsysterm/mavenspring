@@ -18,6 +18,6 @@ public class IndexController {
      */
     @RequestMapping("/test")
     public String test(){
-        return "springmvc test success";
+        return "springmvc test success(调试成功)";
     }
 }
