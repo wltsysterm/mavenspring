@@ -97,39 +97,17 @@
     <pluginManagement>
       <plugins>
         <!-- 配置Tomcat插件 -->
-        <!--      <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.1</version>
-                <configuration>
-                  <port>9090</port>
-                  <path>/</path>
-                  <uriEncoding>UTF-8</uriEncoding>
-                  <server>tomcat7</server>
-                </configuration>
-              </plugin>-->
-        <plugin>
-          <groupId>org.mortbay.jetty</groupId>
-          <artifactId>jetty-maven-plugin</artifactId>
-          <version>8.1.5.v20120716</version>
-          <configuration>
-            <connectors>
-              <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-                <port>80</port> <!-- 访问端口,默认8080 -->
-              </connector>
-            </connectors>
-            <!--　一个Jetty的端口数字，又来监听接收一个终止的命令并将其终止。-->
-            <stopPort>9966</stopPort>
-            <!--一个发送到stopPort端口的有效命令。-->
-            <stopKey>foo</stopKey>
-            <!--如果scanInterval参数设置了一个非0的数，那么Jetty将会监视你的pom.xml，WEB-INF/lib，WEB-INF/classes和WEB-INF/web.xml文件，如果检测到改变则重新部署-->
-            <scanIntervalSeconds>1</scanIntervalSeconds>
-            <webApp>
-              <!-- web项目根路径 -->
-              <contextPath>/</contextPath>
-            </webApp>
-          </configuration>
-        </plugin>
+          <plugin>
+            <groupId>org.apache.tomcat.maven</groupId>
+            <artifactId>tomcat7-maven-plugin</artifactId>
+            <version>2.1</version>
+            <configuration>
+              <port>80</port>
+              <path>/</path>
+              <uriEncoding>UTF-8</uriEncoding>
+              <server>tomcat7</server>
+            </configuration>
+          </plugin>
       </plugins>
     </pluginManagement>
   </build>
