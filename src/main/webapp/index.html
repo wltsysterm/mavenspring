@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function test(){
+            $.ajax({
+                url:bs.apiRoot("")+"/api/index/test",
+                success:function (result) {
+                    $("div").html(result);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<button type="button" onclick="test();">测试springmvc启动情况</button>
+<div></div>
+</body>
+<script src="./lib/jQuery/jquery-2.2.3.min.js"></script>
+<script src="./lib/validate/jquery.validate.min.js"></script>
+<script src="./lib/future.js"></script>
+</html>
